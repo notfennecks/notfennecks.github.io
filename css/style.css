@@ -1,12 +1,91 @@
+/* --------------------
+   Global Styles
+-------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-.hero {
-    min-height: 100vh;
+
+/* --------------------
+   Navigation
+-------------------- */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 10%;
 }
 
-.projects {
-    display: grid;
+nav ul {
+    display: flex;
+    gap: 25px;
+
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+
+/* --------------------
+   Hero
+-------------------- */
+
+header {
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px;
+}
+
+
+/* --------------------
+   Sections
+-------------------- */
+
+section {
+    padding: 80px 10%;
+}
+
+section h2 {
+    margin-bottom: 30px;
+}
+
+
+/* --------------------
+   Projects
+-------------------- */
+
+.project-card {
+    border: 1px solid;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+
+/* --------------------
+   Footer
+-------------------- */
+
+footer {
+    text-align: center;
+    padding: 30px;
 }

@@ -5,106 +5,464 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
 
     <title>Dylan Santiago | Portfolio</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav>
-        <h2>Dylan Santiago</h2>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href ="#home" class="logo">Dylan Santiago</a>
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+            <button class="nav-toggle" aria-label="Open navigation menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
     </nav>
 
     <!-- Hero Section -->
-    <header id="home">
-        <h1>Dylan Santiago</h1>
+    <header id="home" class="hero">
 
-        <h2>Computer Science | Artificial Intelligence | Software Engineering</h2>
+        <div class="hero-content">
+            <p class="hero-intro">Hello, I'm</p>
 
-        <p>
-            Computer Science professional specializing in artificial intelligence,
-            machine learning, data analysis, and software development.
-        </p>
+            <h1>Dylan Santiago</h1>
 
-        <a href="#projects">View My Projects</a>
+            <h2>
+                Artificial Intelligence • Software Engineering • Data Scientist
+            </h2>
+
+            <p class="hero-description">
+                Computer Science professional with a Master's degree specializing
+                in Artificial Intelligence. I develop software, machine learning
+                systems, and data-driven applications using technologies including
+                Python, C++, SQL, and machine learning frameworks.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#projects" class="button primary-button">
+                    View Projects
+                </a>
+
+                <a href="assets/resume/Resume9-28.pdf"
+                class="button primary-button"
+                target="_blank">
+                    View Resume
+                </a>
+
+                <a href="https://github.com/notfennecks" 
+                class="social-button"
+                target="_blank"
+                rel="noopener noreferrer"
+                area-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/dylan-santiago-4ab42b1b0/"
+                class="social-button"
+                target="_blank"
+                rel="noopener noreferrer"
+                area-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+            </div>
+
+        </div>
+
     </header>
 
     <main>
 
         <!-- About -->
-        <section id="about">
+        <section id="about" class="about">
+
             <h2>About Me</h2>
 
-            <p>
-                About me content will go here.
-            </p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a Computer Science professional with a Master's degree
+                        specializing in Artificial Intelligence. My interests span
+                        software engineering, machine learning, data science, and
+                        intelligent systems.
+                    </p>
+                    <p>
+                        My work has included developing reinforcement learning
+                        environments, machine learning models, data-driven
+                        applications, and software using Python, C++, C#, SQL,
+                        and related technologies.
+                    </p>
+                    <p>
+                        I enjoy taking complex problems and turning them into
+                        practical software solutions, while continuously exploring
+                        new technologies and expanding my skills as a developer.
+                    </p>
+
+                </div>
+
+            </div>
+        
         </section>
 
 
         <!-- Skills -->
-        <section id="skills">
+        <section id="skills" class="skills">
+
             <h2>Technical Skills</h2>
 
-            <p>
-                Python | C++ | C# | SQL | Machine Learning | Data Analysis
-            </p>
+            <div class="skills-grid">
+
+                <!-- Programming Languages -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+
+                    <div class="skill-list">
+                        <span>Python</span>
+                        <span>C++</span>
+                        <span>C#</span>
+                        <span>SQL</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                </div>
+
+                <!-- AI & Machine Learning -->
+                <div class="skill-card">
+
+                    <div class="skill-card-header">
+                        <i class="fa-solid fa-brain"></i>
+                        <h3>AI & Machine Learning</h3>
+                    </div>
+
+                    <div class="skill-list">
+                        <span>PyTorch</span>
+                        <span>scikit-learn</span>
+                        <span>Reinforcement Learning</span>
+                        <span>Neural Networks</span>
+                        <span>Unity ML-Agents</span>
+                        <span>Machine Learning</span>
+                    </div>
+
+                </div>
+
+                <!-- Data & Databases -->
+                <div class="skill-card">
+
+                    <div class="skill-card-header">
+                        <i class="fa-solid fa-database"></i>
+                        <h3>Data & Databases</h3>
+                    </div>
+
+                    <div class="skill-list">
+                        <span>MySQL</span>
+                        <span>PostreSQL</span>
+                        <span>Oracle SQL</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Data Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Development Tools -->
+                <div class="skill-card">
+
+                    <div class="skill-card-header">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <h3>Development Tools</h3>
+                    </div>
+
+                    <div class="skill-list">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Unity</span>
+                        <span>Visual Studio</span>
+                        <span>VS Code</span>
+                        <span>Jupyter</span>
+                        <span>Unreal Engine</span>
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
 
         <!-- Projects -->
-        <section id="projects">
-            <h2>Featured Projects</h2> 
+        <section id="projects" class="projects">
 
-            <div class="project-card">
-                <h3>Game Recommendation Engine</h3>
+            <h2>Projects</h2> 
 
-                <p>
-                    Project description will go here.
-                </p>
+            <div class="projects-list">
+
+                <!-- GameMatch -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/gamematch.png"
+                             alt="GameMatch video game recommendation app">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <h3>GameMatch</h3>
+                        </div>
+
+                        <p class="project-description">
+                            A machine learning-powered video game recommendation app that helps users discover new games.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Streamlit</span>
+                            <span>Pandas</span>
+                            <span>scikit-learn</span>
+                            <span>Data Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://game-match.streamlit.app/"
+                               class="project-button primary-project-button"
+                               target="_blank"
+                               rel="noopener noreferrer">
+
+                               <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                               Live Demo
+                            </a>
+                            <a href="https://github.com/notfennecks/GameMatch"
+                               class="project-button primary-project-button"
+                               target="_blank"
+                               rel="noopener noreferrer">
+
+                               <i class="fa-brands fa-github"></i>
+                               GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Crowd Agent Simulation -->
+                <article class="project-card">
+
+                    <!-- Project Image -->
+                    <div class="project-image">
+                        <img src="assets/images/crowdAI.png"
+                            alt="Crowd Agent Simulation reinforcement learning environment">
+                    </div>
+
+                    <!-- Project Information -->
+                    <div class="project-content">
+
+                        <div class="project-label">
+                            Master's Thesis
+                        </div>
+
+                        <div class="project-header">
+                            <i class="fa-solid fa-people-group"></i>
+                            <h3>Crowd Agent Simulation</h3>
+                        </div>
+
+                        <p class="project-description">
+                            A multi-agent crowd simulation developed using Unity ML-Agents
+                            to investigate how reinforcement learning can produce realistic
+                            pedestrian navigation and behavior. Compared PPO, SAC, and POCA
+                            across different environments using performance metrics such as
+                            time to goal and collisions.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Reinforcement Learning</span>
+                            <span>Unity</span>
+                            <span>ML-Agents</span>
+                            <span>C#</span>
+                            <span>Python</span>
+                            <span>PPO</span>
+                            <span>SAC</span>
+                            <span>POCA</span>
+                        </div>
+
+                        <div class="project-links">
+
+                            <a href="https://github.com/notfennecks/CrowdAgentSimulation"
+                            class="project-button primary-project-button"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                                <i class="fa-brands fa-github"></i>
+                                GitHub
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
             </div>
-
-            <div class="project-card">
-                <h3>AI Crowd Simulation</h3>
-
-                <p>
-                    Project description will go here.
-                </p>
-            </div>
-
         </section>
 
 
-        <!-- Experience -->
-        <section id="experience">
-            <h2>Experience & Education</h2>
+        <!-- Education -->
+        <section id="education" class="education">
+            <h2>Education</h2>
 
-            <p>
-                Experience and education information will go here.
-            </p>
+            <div class="education-list">
+
+                <!-- Master's Degree -->
+                <div class="education-card">
+
+                    <div class="education-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+
+                    <div class="education-content">
+
+                        <h3>Master of Science</h3>
+                        
+                        <p class="education-degree">
+                            Computer Science
+                        </p>
+
+                        <p class="education-focus">
+                            Specialization in Artificial Intelligence
+                        </p>
+
+                        <p class="education-school">
+                            SUNY Polytechnic Institute
+                        </p>
+
+                        <p class="education-description">
+                            Graduate study combining theoretical and applied computer science with a specialization 
+                            in Artificial Intelligence and Modeling. Focused on machine learning, reinforcement learning, 
+                            intelligent systems, algorithms, and software development, culminating in a master's thesis that 
+                            applied reinforcement learning to multi-agent crowd simulation using Unity ML-Agents.
+                        </p>
+
+                        <div class="education-tags">
+                            <span>Artificial Intelligence</span>
+                            <span>Machine Learning</span>
+                            <span>Reinforcement Learning</span>
+                            <span>Unity ML-Agents</span>
+                            <span>Python</span>
+                            <span>Numerical Programming</span>
+                            <span>Data Analysis</span>
+                            <span>Computer Vision</span>
+                            <span>Deep Learning</span>
+                            <span>C++</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Bachelor's Degree -->
+                <div class="education-card">
+
+                    <div class="education-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+
+                    <div class="education-content">
+
+                        <h3>Bachelor of Science</h3>
+
+                        <p class="education-degree">
+                            Interactive Media and Game Design
+                        </p>
+
+                        <p class="education-focus">
+                            Specialization in Game Programming
+                        </p>
+
+                        <p class="education-school">
+                            SUNY Polytechnic Institute
+                        </p>
+
+                        <p class="education-description">
+                            Undergraduate study combining game development, interactive media, software development, 
+                            and game design. Focused on programming and interactive systems while gaining hands-on 
+                            experience designing and developing games, working with game engines, and applying 
+                            computer science principles to interactive applications.
+                        </p>
+
+                        <div class="education-tags">
+                            <span>Game Programming</span>
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Game Design</span>
+                            <span>Unreal Engine</span>
+                            <span>Godot</span>
+                            <span>Autodesk Maya</span>
+                            <span>Photoshop</span>
+                            <span>Environment Design</span>
+                            <span>Scripting</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
-
 
         <!-- Contact -->
-        <section id="contact">
-            <h2>Contact</h2>
+        <section id="contact" class="contact">
+            <div class="contact-content">
+                <h2>Let's Connect</h2>
 
-            <p>
-                GitHub | LinkedIn | Email
-            </p>
-        </section>
+                <p class="contact-description">
+                    I'm always open to discussing software engineering,
+                    artificial intelligence, data science, and new opportunities.
+                    Feel free to reach out.
+                </p>
 
+                <a hred="mailto:notfennecks@gmail.com"
+                   class="contact-email">
+
+                   <i class="fa-solid fa-envelope"></i>
+
+                    notfennecks@gmail.com
+                </a>
+                   
+                <div class="contact-socials">
+
+                    <a href="https://github.com/notfennecks"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="GitHub">
+                       <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/dylansantiago1/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="LinkedIn">
+                       <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                </div>
+            </div>
     </main>
 
 

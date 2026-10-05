@@ -34,6 +34,8 @@ const SIGNAL_SPEED = 0.045;
 const SIGNAL_SIZE = 2.2;
 const SIGNAL_GLOW_SIZE = 10;
 
+const MAX_PULSE_DEPTH = 6;
+
 
 /* =========================================
    Create Hex Grid
@@ -760,6 +762,18 @@ export function createHexGrid() {
 
             distances.set(node.id, depth);
 
+            /* =============================
+                Stop Wave At Max Distance
+            ============================= */
+
+            if (depth >= MAX_PULSE_DEPTH) {
+                continue;
+            }
+
+            /* =============================
+                Continue Propagation
+            ============================= */
+
             for (
                 const connection
                 of node.neighbors
@@ -931,6 +945,16 @@ export function createHexGrid() {
                         );
                 }
 
+                /* =============================
+                    Distance Fade
+                ============================= */
+
+                const distanceFade =
+                    1 -
+                    depth /
+                    (MAX_PULSE_DEPTH + 1);
+
+                energy *= distanceFade;
 
                 /*
                 * Combine overlapping pulses.
@@ -942,7 +966,6 @@ export function createHexGrid() {
                         energy
                     );
             }
-
 
             /* =============================
             Remove finished pulse

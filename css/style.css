@@ -111,12 +111,6 @@ main section:nth-child(even) {
 
 }
 
-.fa-solid,
-.fa-regular,
-.fa-brands {
-    color: var(--accent-color);
-}
-
 /* =========================================================
 
    NAVIGATION
@@ -618,6 +612,20 @@ main section:nth-child(even) {
     border-color 0.2s ease;
 
 }
+
+.skill-icon {
+        display: flex;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        min-width: 30px;
+
+        font-size: 1.6rem;
+
+        color: var(--accent-color);
+    }
 
 .skill-card:hover {
 
@@ -1654,20 +1662,6 @@ footer p {
 
         padding: 25px;
 
-    }
-
-    .skill-icon {
-        display: flex;
-
-        align-items: flex-start;
-
-        justify-content: center;
-
-        min-width: 30px;
-
-        font-size: 1.6rem;
-
-        color: var(--accent-color);
     }
 
     .project-image {

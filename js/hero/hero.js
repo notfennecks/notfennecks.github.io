@@ -7,7 +7,7 @@ import {
 
 import {
     createHexGrid
-} from "./hexGrid.js";
+} from "./hexgrid.js";
 
 
 export function initHero() {

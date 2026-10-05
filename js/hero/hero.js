@@ -1,10 +1,13 @@
-import {
-    createRippleSystem
-} from "./ripple.js";
-
+//Fractal Tree Import
+/* 
 import {
     drawFractalScene
 } from "./fractal.js";
+*/
+
+import {
+    createHexGrid
+} from "./hexGrid.js";
 
 
 export function initHero() {
@@ -51,9 +54,8 @@ export function initHero() {
     let heroVisible = true;
     let isAnimating = false;
 
-
-    const rippleSystem =
-        createRippleSystem(ctx);
+    const hexGrid =
+        createHexGrid();
 
 
     /* ==============================
@@ -118,6 +120,9 @@ export function initHero() {
             height
         );
 
+        /* ==============================
+            Cursor Glow
+        ============================== */
 
         if (mouse.active) {
 
@@ -153,7 +158,8 @@ export function initHero() {
             );
         }
 
-
+        //Fractal Tree Scene
+        /*
         drawFractalScene({
             ctx,
             width,
@@ -162,10 +168,18 @@ export function initHero() {
             time,
             rippleSystem
         });
+        */
 
-
-        // Draw ripple on top
-        rippleSystem.draw();
+        /* ==============================
+            Hex Grid
+        ============================== */
+       hexGrid.draw({
+            ctx,
+            width,
+            height,
+            mouse,
+            time
+        });
     }
 
 
@@ -267,16 +281,35 @@ export function initHero() {
             }
 
 
+            /*
+            * Don't trigger effects when
+            * clicking interactive controls.
+            */
+            if (
+                event.target.closest(
+                    "a, button, input, textarea"
+                )
+            ) {
+                return;
+            }
+
+
             const rect =
                 hero.getBoundingClientRect();
 
 
-            rippleSystem.addRipple(
+            const x =
                 event.clientX -
-                rect.left,
+                rect.left;
 
+            const y =
                 event.clientY -
-                rect.top
+                rect.top;
+
+
+            hexGrid.triggerPulse(
+                x,
+                y
             );
         }
     );

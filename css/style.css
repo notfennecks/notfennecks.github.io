@@ -1514,7 +1514,10 @@ footer p {
 
 @media (max-width: 900px) {
 
-    .education-list {
+    .education-list,
+    .experience-list,
+    .projects-list,
+    .skills-grid {
         grid-template-columns: 1fr;
     }
 

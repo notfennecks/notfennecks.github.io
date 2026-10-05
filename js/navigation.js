@@ -15,7 +15,6 @@ export function initNavigation() {
     const sections =
         document.querySelectorAll("section");
 
-
     if (!navToggle || !navMenu || !navIcon) {
         return;
     }
